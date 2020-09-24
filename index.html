@@ -26,9 +26,19 @@
     <!-- This is a Semantic HTML Change |
       Put a header around the menu and hero divs. 
     -->
-    <header>
+    <!-- This is an A11y Change 
+      Added banner to the role of the header. Using 
+      ARIA landmarks to identify regions of a page. 
+      ARIA11
+    -->
+    <header role="banner">
       <!-- This is a Semantic HTML Change |
         Changed the div for menu to a nav.
+      -->
+      <!-- This is an A11y Change 
+        Added navigation role to the nav tag. Using 
+        ARIA landmarks to identify regions of a page. 
+        ARIA11
       -->
       <nav role="navigation" class="menu">
         <ul>
@@ -52,12 +62,17 @@
         Put an article tag around all of the text boxes together.
       -->
       <article class="page-area">
-        <!-- This is an SEO Change 
-          Added title to explain article wrapping of app features. Changed 
-          feature headers to h2 to optimize page hierarchy for SEO purposes.
+        <!-- This is an A11y Change 
+          Added title to explain article wrapping of app features. 
+          Providing heading elements at the beginning of each section of content.
+          H69
         -->
         <h2 class="article-title">Our Key Features</h2>
         <div class="text-box">
+          <!-- This is an SEO Change 
+            Changed feature headers to h3 to optimize 
+            page hierarchy for SEO purposes.
+          -->
           <h3>Stay on track</h3>
           <p>
             Do you know where you are spending your money? If you really stop to
