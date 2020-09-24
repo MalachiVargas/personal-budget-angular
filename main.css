@@ -68,9 +68,21 @@ div.hero h2 {
   width: 100%;
 }
 
+article h2.article-title {
+  color: black;
+  font-size: 3.2em;
+  margin-bottom: 20px;
+}
+
 .page-area {
   max-width: 768px;
   display: inline-block;
+}
+
+div.text-box h3 {
+  color: black;
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
 .bottom {
@@ -83,7 +95,7 @@ div.hero h2 {
   text-align: center;
 }
 
-.container section.text-box {
+.container div.text-box {
   display: inline-block;
   width: 100%;
   max-width: 340px;
@@ -92,7 +104,7 @@ div.hero h2 {
 }
 
 @media screen and (min-width: 768px) {
-  .container .section.text-box {
+  .container .div.text-box {
     margin: 10px;
   }
 }
