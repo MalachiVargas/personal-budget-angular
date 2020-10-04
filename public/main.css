@@ -91,6 +91,10 @@ div.text-box h3 {
   padding: 40px;
 }
 
+#d3js {
+  font-size: 2em;
+}
+
 .center {
   text-align: center;
 }
