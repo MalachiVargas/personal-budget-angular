@@ -1,0 +1,67 @@
+<main class="container center">
+  <!-- This is a Semantic HTML Change
+    Put an article tag around all of the text boxes together.
+  -->
+  <article class="page-area">
+    <!-- This is an A11y Change
+      Added title to explain article wrapping of app features.
+      Providing heading elements at the beginning of each section of content.
+      H69
+    -->
+    <h2 class="article-title">Our Key Features</h2>
+
+    <pb-article
+      [title]="'Stay on track'"
+      [content]="'Do you know where you are spending your money? If you really stop to
+      track it down, you would get surprised! Proper budget management
+      depends on real data... and this app will help you with that!'"
+    ></pb-article>
+
+    <pb-article
+      [title]="'Alerts'"
+      [content]="'What if your clothing budget ended? You will get an alert. The goal
+      is to never go over the budget.'"
+    ></pb-article>
+
+    <pb-article
+      [title]="'Results'"
+      [content]="'People who stick to a financial plan, budgeting every expense, get
+      out of debt faster! Also, they to live happier lives... since they
+      expend without guilt or fear... because they know it is all good and
+      accounted for.'"
+    ></pb-article>
+
+    <pb-article
+      [title]="'Free'"
+      [content]="'This app is free!!! And you are the only one holding your data!'"
+    ></pb-article>
+
+    <pb-article
+      [title]="'Stay on track'"
+      [content]="'Do you know where you are spending your money? If you really stop to
+      track it down, you would get surprised! Proper budget management
+      depends on real data... and this app will help you with that!'"
+    ></pb-article>
+
+    <pb-article
+      [title]="'Alerts'"
+      [content]="'What if your clothing budget ended? You will get an alert. The goal
+      is to never go over the budget.'"
+    ></pb-article>
+
+    <div class="text-box">
+      <h3>ChartJS</h3>
+      <canvas id="myChart" width="250" height="250"></canvas>
+    </div>
+
+    <pb-article
+    [title]="'Results'"
+    [content]="'What if your clothing budget ended? You will get an alert. The goal
+    is to never go over the budget.'"
+  ></pb-article>
+
+  </article>
+  <!-- Create a div where the graph will take place -->
+  <h3 id="d3js">D3JS</h3>
+  <div id="my_dataviz"></div>
+</main>
