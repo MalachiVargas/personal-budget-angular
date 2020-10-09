@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { DataService } from '../data.service';
 import { Chart } from 'chart.js';
 
 @Component({
@@ -8,14 +8,6 @@ import { Chart } from 'chart.js';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-
-  createChart() {
-    var ctx = document.getElementById('myChart');
-    var myPieChart = new Chart(ctx, {
-      type: 'pie',
-      data: this.dataSource,
-    });
-  }
 
   public dataSource = {
     datasets: [
@@ -35,18 +27,25 @@ export class HomepageComponent implements OnInit {
     labels: [],
   };
 
-  constructor(private http: HttpClient) { }
+  createChart(data) {
 
-  ngOnInit(): void {
-    this.http.get('http://localhost:3000/budget')
-    .subscribe((res: any) => {
-      for (let i = 0; i < res.myBudget.length; i++) {
-        this.dataSource.datasets[0].data[i] = res.myBudget[i].budget;
-        this.dataSource.labels[i] = res.myBudget[i].title;
-      }
-      this.createChart();
+    for (var i = 0; i < data.myBudget.length; i++) {
+      this.dataSource.datasets[0].data[i] = data.myBudget[i].budget;
+      this.dataSource.labels[i] = data.myBudget[i].title;
+    }
 
+    var ctx = document.getElementById('myChart');
+    var myPieChart = new Chart(ctx, {
+      type: 'pie',
+      data: this.dataSource,
     });
   }
 
+  constructor(public data: DataService) { }
+
+  ngOnInit(): void {
+    this.data.getDataChart().subscribe((data: any) => {
+      this.createChart(data);
+    });
+  }
 }

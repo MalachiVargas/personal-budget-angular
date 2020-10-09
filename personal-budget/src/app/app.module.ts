@@ -12,6 +12,10 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { P404Component } from './p404/p404.component';
 import { FooterComponent } from './footer/footer.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { ContactComponent } from './contact/contact.component';
+import { PieComponent } from './pie/pie.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -23,14 +27,17 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     LoginComponent,
     P404Component,
-    FooterComponent
+    FooterComponent,
+    BreadcrumbsComponent,
+    ContactComponent,
+    PieComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
